@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
     public void Winner()
     {
         Debug.LogError("Tenemos un ganador: el jugador " + playerNumber );
-        message.GetComponent<Text>().text = ("Tenemos un ganador: el jugador" + playerNumber.ToString());
+        //message.GetComponent<Text>().text = ("Tenemos un ganador: el jugador" + playerNumber.ToString());
         //ResetGame();
     }
 
