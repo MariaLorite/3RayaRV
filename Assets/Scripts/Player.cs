@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 using static Zinnia.Pointer.ObjectPointer;
 
 public abstract class Player : MonoBehaviour, IPlayerBehaviour
@@ -19,8 +20,14 @@ public abstract class Player : MonoBehaviour, IPlayerBehaviour
         if (a != null)
         {
             if(gameManager.LastPlayerTurn != PlayerNumber)
+            {
+                gameManager.message.GetComponent<Text>().text = "";
                 PutChip(a.CollisionData.collider.transform.gameObject);
-          
+            } else
+            {
+                gameManager.message.GetComponent<Text>().text = "No es tu turno";
+            }
+                    
         }
     }
 
